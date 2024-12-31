@@ -27,7 +27,7 @@ function ViewItem({ itemId, handleCloseViewItem }: ViewItemProps) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-bgLightGray w-96 rounded p-8"
+        className="bg-bgLightGray w-96 rounded-lg p-8 border-2 border-primary"
       >
         <h1 className="font-bold text-3xl">{item?.itemName}</h1>
         <br />
@@ -40,13 +40,8 @@ function ViewItem({ itemId, handleCloseViewItem }: ViewItemProps) {
           <strong>{item?.price}</strong>
         </p>
         <br />
-        <span className="text-textPrimary">Description</span>
-        <p>
-          {item?.description} Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Atque, error sed! Architecto temporibus tempore officiis
-          laborum, corporis sequi praesentium nemo repudiandae minus odio
-          debitis rerum officia. Maxime, consequatur rerum. Culpa.{" "}
-        </p>
+        <span className="text-textPrimary">Description: </span>
+        <p>{item?.description}</p>
         <br />
         <p>
           <span className="text-textPrimary">Category: </span>
